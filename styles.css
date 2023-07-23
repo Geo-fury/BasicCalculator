@@ -1,0 +1,133 @@
+/* Reset some default styles for cleaner appearance */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2d2d2d; /* Dark gray background */
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  background-color: #414141; /* Slightly lighter than the background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 360px;
+}
+
+#display {
+  font-size: 24px;
+  color: #ffffff; /* White text color */
+  background-color: #525252; /* Same as calculator background */
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.num, .operator, .calculate, .clear, .clear-all {
+  font-size: 20px;
+  background-color: #4a4a4a; /* Gray button background */
+  color: #ffffff; /* White text color */
+  border: 1px solid #4a4a4a; /* Same as button background */
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.num:hover, .operator:hover, .calculate:hover, .clear:hover, .clear-all:hover {
+  background-color: #38598a; /* Deep blue on hover for all buttons */
+}
+
+.clear {
+  background-color: #ff6464; /* Red for clear button */
+  color: #ffffff; /* White text color */
+  border-color: #ff6464; /* Same as button background */
+}
+
+.clear:hover {
+  background-color: #e04646; /* Slightly darker red on hover */
+}
+
+.clear-all {
+  background-color: #949494; /* Gray for clear-all button */
+  color: #ffffff; /* White text color */
+  border-color: #949494; /* Same as button background */
+}
+
+.clear-all:hover {
+  background-color: #737373; /* Slightly darker gray on hover */
+}
+
+.operator {
+  background-color: #f59f00; /* Golden yellow for operator buttons */
+  color: #2d2d2d; /* Dark gray text color for operator buttons */
+}
+
+.operator:hover {
+  background-color: #ffcc00; /* Lighter golden yellow on hover */
+}
+
+/* Modify the "." button to neon green */
+.num.decimal {
+  background-color: #4a4a4a; /* Neon green for the decimal button */
+  color: #ffffff; /* Darker gray text color for decimal button */
+}
+
+.num.decimal:hover {
+  background-color: #36e40d; /* Slightly darker neon green on hover */
+}
+
+/* Change the "=" button to deep blue */
+.calculate {
+  background-color: #38598a; /* Deep blue for equal button */
+  color: #ffffff; /* White text color for equal button */
+  border-color: #38598a; /* Same as button background */
+}
+
+.calculate:hover {
+  background-color: #0e0625; /* Darker deep blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .calculator {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+  }
+
+  .num, .operator, .calculate, .clear, .clear-all {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  #display {
+    font-size: 20px;
+  }
+}
